@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+            $("#bt").click(function(){
+                $("#my").slideDown(1000);
+            });
+            $("#bt").click(function(){
+                $("#my").animate({opacity:0.5,width:"100px",height:"100px"},1000); 
+            });
+            $("#bt").click(function(){
+                $("#my").fadeIn(1000); 
+            });
+            $("#bt").click(function(){
+                $("#my").hide(1000); 
+            });
+            $("#bt").click(function(){
+                $("#my").show(1000); 
+            });
+            // $("#bt").click(function(){
+                $("#my").mouseenter(function(){
+                    $(this).css("background-color","lightgreen")
+                });
+            // });
+                $("#bt").dblclick(function(){
+                    alert("Doubled-Click")
+                }); 
+            // $("#bt").click(function(){
+                $("#my").mouseleave(function(){
+                    $(this).css("background-color","blue");
+                });
+            // $("#bt").click(function(){
+                $("#my").attr("title","Dyanamic title"); 
+            // });
+            // $("#bt").click(function(){
+                $("#my").html("New Content"); 
+            });
+        // });
+    </script>
+    <style>
+        div{
+            width: 100px;
+            height: 200px;
+            background: lightblue;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="bt">click me!</button>
+    <div id="my">My Element</div>
+</body>
+</html>

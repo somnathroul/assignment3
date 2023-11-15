@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var position={
+                top:$("a").offset().top,
+                left:$("b").offset().left,
+            };
+            $("a").click(function(){
+                $("d").width($("d")).width()+50;
+                $("d").animate({
+                    left:position.left+250,},500);
+                    alert("div moved to the right");
+                    position.left+=250;
+                });
+                $("b").click(function(){
+                    $("d").animate({
+                        left:position.left-250,
+                    },500);
+                    $("d").width(50);
+                    alert("div moved to left");
+                    position.left-=250;
+                    });
+            });
+    </script>
+    <style>
+        .d{
+            width: 50px;
+            height: 50px;
+            background-color:lightcoral;
+            position: relative;
+        }
+        .a{
+            margin-top:10px;
+        }
+        .b{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d"></div>
+    <button class="a">right</button>
+    <button class="b">left</button>
+    
+</body>
+</html>
